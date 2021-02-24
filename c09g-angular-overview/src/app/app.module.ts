@@ -1,22 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SumAppComponent } from './sum-app/sum-app.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 import {FormsModule} from '@angular/forms';
-import { ColorPickerComponent } from './color-picker/color-picker.component';
-
+import { SelectColorComponent } from './select-color/select-color.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SumAppComponent,
-    ColorPickerComponent
+    CalculatorComponent,
+    SelectColorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule
   ],
   providers: [],

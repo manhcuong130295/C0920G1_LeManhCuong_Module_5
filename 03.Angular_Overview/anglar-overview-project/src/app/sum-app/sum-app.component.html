@@ -1,0 +1,16 @@
+<p>sum-app works!</p>
+<form>
+
+</form>
+<label for="num1">Number 1:</label>
+<input id="num1" type="number" (change)="getValueNumber1($event.target['value'])"/>
+
+<label for="num2">Number 2:</label>
+<input id="num2" type="number" (change)="getValueNumber2($event.target['value'])"/>
+
+<button (click)="sum()">+</button>
+<button (click)="sub()">-</button>
+<button (click)="mul()">*</button>
+<button (click)="div()">/</button>
+
+<h2>{{result}}</h2>

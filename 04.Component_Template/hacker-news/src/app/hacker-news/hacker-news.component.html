@@ -1,0 +1,25 @@
+<h2>Today's article</h2>
+<hr>
+<div *ngFor="let art of articles">
+  <a href="{{art.url}}" target="_blank">{{art.title}}</a>
+  <app-likes></app-likes>
+</div>
+<hr>
+<div class="input-group" >
+  <div class="input-group-prepend">
+    <span class="input-group-text">Title</span>
+  </div>
+  <textarea  [(ngModel)]="article.title" cols="70"  class="form-control" aria-label="With textarea"></textarea>
+</div>
+
+<div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Url</span>
+  </div>
+  <textarea  [(ngModel)]="article.url" cols="70"  class="form-control" aria-label="With textarea"></textarea>
+</div>
+
+<button class="btn btn-primary" (click)="addArticle()">Add</button>
+@CodeGym, 2019
+
+

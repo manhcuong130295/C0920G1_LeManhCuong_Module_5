@@ -1,0 +1,6 @@
+<p>select-color works!</p>
+<label>Select color</label>
+<input [value]="color" type="color" (change)="onChange($event.target['value'])">
+<p>Output:</p>
+<div class="color-preview" [style.background]="color"></div>
+

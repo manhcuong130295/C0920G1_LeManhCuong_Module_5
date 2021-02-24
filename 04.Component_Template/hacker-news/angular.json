@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "7a37f4a4-e124-4911-88da-54e18c813291"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "anglar-overview-project": {
+    "hacker-news": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/anglar-overview-project",
+            "outputPath": "dist/hacker-news",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -39,7 +42,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -62,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "anglar-overview-project:build"
+            "browserTarget": "hacker-news:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "anglar-overview-project:build:production"
+              "browserTarget": "hacker-news:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "anglar-overview-project:build"
+            "browserTarget": "hacker-news:build"
           }
         },
         "test": {
@@ -110,19 +112,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "anglar-overview-project:serve"
+            "devServerTarget": "hacker-news:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "anglar-overview-project:serve:production"
+              "devServerTarget": "hacker-news:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "anglar-overview-project",
-  "cli": {
-    "analytics": "c30aeafb-65f0-4ea5-b435-f148db302fcb"
-  }
+  "defaultProject": "hacker-news"
 }

@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "b47c93a4-4ae5-41b9-95de-e33d0f2e6116"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "anglar-overview-project": {
+    "c09g-angular-component-template": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/anglar-overview-project",
+            "outputPath": "dist/c09g-angular-component-template",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -39,7 +42,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -62,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "anglar-overview-project:build"
+            "browserTarget": "c09g-angular-component-template:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "anglar-overview-project:build:production"
+              "browserTarget": "c09g-angular-component-template:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "anglar-overview-project:build"
+            "browserTarget": "c09g-angular-component-template:build"
           }
         },
         "test": {
@@ -110,19 +112,24 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "anglar-overview-project:serve"
+            "devServerTarget": "c09g-angular-component-template:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "anglar-overview-project:serve:production"
+              "devServerTarget": "c09g-angular-component-template:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "anglar-overview-project",
-  "cli": {
-    "analytics": "c30aeafb-65f0-4ea5-b435-f148db302fcb"
-  }
+  "defaultProject": "c09g-angular-component-template",
+  "styles": [
+    "src/styles.css",
+    "node_modules/bootstrap/dist/css/bootstrap.min.css"
+  ],
+  "scripts": [
+    "node_modules/jquery/dist/jquery.min.js",
+    "node_modules/bootstrap/dist/js/bootstrap.min.js"
+  ]
 }

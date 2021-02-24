@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "anglar-overview-project": {
+    "c09g-angular-overview": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/anglar-overview-project",
+            "outputPath": "dist/c09g-angular-overview",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "anglar-overview-project:build"
+            "browserTarget": "c09g-angular-overview:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "anglar-overview-project:build:production"
+              "browserTarget": "c09g-angular-overview:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "anglar-overview-project:build"
+            "browserTarget": "c09g-angular-overview:build"
           }
         },
         "test": {
@@ -110,19 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "anglar-overview-project:serve"
+            "devServerTarget": "c09g-angular-overview:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "anglar-overview-project:serve:production"
+              "devServerTarget": "c09g-angular-overview:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "anglar-overview-project",
+  "defaultProject": "c09g-angular-overview",
   "cli": {
-    "analytics": "c30aeafb-65f0-4ea5-b435-f148db302fcb"
+    "analytics": "4c678b60-18ef-4265-b136-590770b82403"
   }
 }
